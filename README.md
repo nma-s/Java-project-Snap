@@ -1,1 +1,1 @@
-# Java-project-Snap
+# Java-project-snap
