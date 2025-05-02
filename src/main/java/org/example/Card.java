@@ -25,9 +25,9 @@ public class Card {
 //        return symbol.getCardSymbol();
 //    }
 //
-//    public int getValue() {
-//        return value.getCardValue();
-//    }
+    public int getValue() {
+        return value;
+    }
 
 @Override
     public String toString(){

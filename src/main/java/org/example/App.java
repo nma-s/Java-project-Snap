@@ -17,6 +17,8 @@ public class App {
 CardGame snap = new CardGame();
         System.out.println(snap.getDeck());
         System.out.println(snap.getDeck().size());
+        System.out.println(snap.dealCard());
+        System.out.println(snap.sortDeckInNumberOrder());
 
     }
 }
