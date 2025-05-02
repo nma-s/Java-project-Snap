@@ -19,6 +19,9 @@ CardGame snap = new CardGame();
         System.out.println(snap.getDeck().size());
         System.out.println(snap.dealCard());
         System.out.println(snap.sortDeckInNumberOrder());
+        System.out.println("Sorted By Suits" + snap.sortDeckIntoSuits());
+        System.out.println(snap.shuffleDeck());
+
 
     }
 }

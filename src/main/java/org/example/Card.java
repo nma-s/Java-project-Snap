@@ -17,9 +17,9 @@ public class Card {
         this.value = symbolValue.getCardValue();
     }
 
-//    public String getSuits() {
-//        return suits.getSuitSymbol();
-//    }
+    public String getSuits() {
+        return suits;
+    }
 //
 //    public String getSymbol() {
 //        return symbol.getCardSymbol();

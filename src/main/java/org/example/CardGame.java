@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 
 // STAGE 1
@@ -50,11 +51,17 @@ public class CardGame {
 //
 //    ArrayList<Card> sortDeckIntoSuits()
 //    Sorts the deck into suits (2,3,4,5,6,7,8,9,10,J,Q,K,A of hearts, then 2,3,4,5,6,7,8,9,10,J,Q,K,A of clubs etc.) and stores the new shuffled deck back into the deckOfCards attribute.
-//
+    public ArrayList<Card> sortDeckIntoSuits() {
+        deckOfCards.sort(Comparator.comparing(c -> c.getSuits() ));
+        return deckOfCards;
+    }
+
+
 //    ArrayList<Card> shuffleDeck()
 //    Shuffles the deck into a random order and stores the new shuffled deck back into the deckOfCards attribute.
     public ArrayList<Card> shuffleDeck() {
-        deckOfCards
+        Collections.shuffle(deckOfCards);
+        return deckOfCards;
     }
 
 
