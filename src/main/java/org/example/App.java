@@ -11,8 +11,9 @@ public class App {
     public static void main( String[] args )
     {
 
+    Card card1 = new Card(Suits.HEART,CardSymbol.ACE);
+    deckOfCards.add(card1);
+        System.out.println(card1);
 
-
-        System.out.println( "Hello World!" );
     }
 }

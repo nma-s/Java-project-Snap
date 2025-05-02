@@ -6,32 +6,32 @@ package org.example;
 // Has a toString method that describes the class
 
 public class Card {
-    private final Suits suits;
+    private final String suits;
     private final String symbol;
     private final int value;
 
     //constructor
-    public Card(Suits suits, String symbol, int value) {
-        this.suits = suits;
-        this.symbol = symbol;
-        this.value = value;
+    public Card(Suits suits, CardSymbol symbolValue) {
+        this.suits = suits.getSuitSymbol();
+        this.symbol = symbolValue.getCardSymbol();
+        this.value = symbolValue.getCardValue();
     }
 
-    public Suits getSuits() {
-        return this.suits;
-    }
-
-    public String getSymbol() {
-        return this.symbol;
-    }
-
-    public int getValue() {
-        return this.value;
-    }
+//    public String getSuits() {
+//        return suits.getSuitSymbol();
+//    }
+//
+//    public String getSymbol() {
+//        return symbol.getCardSymbol();
+//    }
+//
+//    public int getValue() {
+//        return value.getCardValue();
+//    }
 
 @Override
     public String toString(){
-        return "This card is a " + symbol
-                + " of " + suits;
+    return "Card[s: " + symbol
+                + ", s: " + suits + ", v: " + value +"]";
 }
 }
