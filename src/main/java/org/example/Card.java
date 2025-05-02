@@ -31,7 +31,7 @@ public class Card {
 
 @Override
     public String toString(){
-    return "Card[s: " + symbol
-                + ", s: " + suits + ", v: " + value +"]";
+    return "\tCard: " + symbol
+                + " of " + suits + " (value: " + value +")";
 }
 }

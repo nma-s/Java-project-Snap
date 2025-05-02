@@ -2,9 +2,9 @@ package org.example;
 
 public enum Suits {
     HEART("♥"), //u2665
-    CLUB("clubs"), // u2663
-    DIAMOND("diamonds"), // u2666
-    SPADE("spades");// u2666
+    CLUB("♣"), //
+    DIAMOND("♦"), // u2666
+    SPADE("♠");// u2660
 
     private final String suitSymbol;
 

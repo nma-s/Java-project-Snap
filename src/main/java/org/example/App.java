@@ -12,8 +12,11 @@ public class App {
     {
 
     Card card1 = new Card(Suits.HEART,CardSymbol.ACE);
-    deckOfCards.add(card1);
-        System.out.println(card1);
+        System.out.println("Test: " + card1);
+
+CardGame snap = new CardGame();
+        System.out.println(snap.getDeck());
+        System.out.println(snap.getDeck().size());
 
     }
 }
