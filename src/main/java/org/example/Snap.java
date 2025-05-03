@@ -15,7 +15,7 @@ public class Snap extends CardGame {
     Scanner snapScanner = new Scanner(System.in);
 
     public Card runSnapScanner(){
-        System.out.println("Press enter to play");
+        System.out.println("Press enter to deal a card");
         snapScanner.nextLine();
         return dealCard();
 //        getDeck().remove(dealCard());
