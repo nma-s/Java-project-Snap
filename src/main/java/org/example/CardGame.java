@@ -14,7 +14,7 @@ public class CardGame {
     private ArrayList<Card> deckOfCards = new ArrayList<>();
     private String name;
 
-
+//  Constructor
     public CardGame() {
       populateDeckOfCards();
 
@@ -28,7 +28,7 @@ public class CardGame {
             }
         }
     }
-
+//  Getter
     public ArrayList<Card> getDeck(){
         return this.deckOfCards;
     }
@@ -37,20 +37,23 @@ public class CardGame {
 //    Takes the card from the top of the deck and returns it.
 
     public Card dealCard() {
-        return deckOfCards.getFirst();
+        Card topCard = deckOfCards.getFirst();
+        deckOfCards.remove(topCard);
+        return topCard;
     }
 
 //    ArrayList<Card> sortDeckInNumberOrder()
-//    Sorts the deck in number order (e.g. 2222333344445555 etc) and stores the new shuffled deck back into the deckOfCards attribute.
+//    Sorts the deck in number order (e.g. 2222333344445555 etc)
+//    and stores the new shuffled deck back into the deckOfCards attribute.
 
     public ArrayList<Card> sortDeckInNumberOrder() {
         deckOfCards.sort(Comparator.comparingInt(c -> c.getValue() ));
         return deckOfCards;
     }
-
-//
 //    ArrayList<Card> sortDeckIntoSuits()
-//    Sorts the deck into suits (2,3,4,5,6,7,8,9,10,J,Q,K,A of hearts, then 2,3,4,5,6,7,8,9,10,J,Q,K,A of clubs etc.) and stores the new shuffled deck back into the deckOfCards attribute.
+//    Sorts the deck into suits (2,3,4,5,6,7,8,9,10,J,Q,K,A of hearts, then 2,3,4,5,6,7,8,9,10,J,Q,K,A of clubs etc.)
+//    and stores the new shuffled deck back into the deckOfCards attribute.
+
     public ArrayList<Card> sortDeckIntoSuits() {
         deckOfCards.sort(Comparator.comparing(c -> c.getSuits() ));
         return deckOfCards;
@@ -59,6 +62,7 @@ public class CardGame {
 
 //    ArrayList<Card> shuffleDeck()
 //    Shuffles the deck into a random order and stores the new shuffled deck back into the deckOfCards attribute.
+
     public ArrayList<Card> shuffleDeck() {
         Collections.shuffle(deckOfCards);
         return deckOfCards;
