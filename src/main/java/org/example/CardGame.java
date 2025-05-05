@@ -17,6 +17,7 @@ public class CardGame {
 //  Constructor
     public CardGame() {
       populateDeckOfCards();
+      shuffleDeck();
 
     }
 
@@ -58,7 +59,6 @@ public class CardGame {
         deckOfCards.sort(Comparator.comparing(c -> c.getSuits() ));
         return deckOfCards;
     }
-
 
 //    ArrayList<Card> shuffleDeck()
 //    Shuffles the deck into a random order and stores the new shuffled deck back into the deckOfCards attribute.

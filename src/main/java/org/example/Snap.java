@@ -7,12 +7,13 @@ package org.example;
 // Each turn, a new card is dealt from the deck.
 // The game continues until two cards in a row have the same symbol, at which point the “player” wins and the game ends.
 
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.Scanner;
 
 public class Snap extends CardGame {
     Scanner snapScanner = new Scanner(System.in);
+
+    public Snap(){
+    }
 
     public Card runSnapScanner(){
         System.out.println("Press enter to deal a card");
@@ -22,9 +23,9 @@ public class Snap extends CardGame {
     }
 
 
-    public Snap(){
-        super();
-    }
+
+
+
 
 
 }
