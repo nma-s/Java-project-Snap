@@ -22,7 +22,11 @@ public class Snap extends CardGame {
 //        getDeck().remove(dealCard());
     }
 
+    public void playSnap(){
+     runSnapScanner();
 
+
+    }
 
 
 

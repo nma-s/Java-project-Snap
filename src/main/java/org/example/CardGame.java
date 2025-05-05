@@ -40,6 +40,8 @@ public class CardGame {
     public Card dealCard() {
         Card topCard = deckOfCards.getFirst();
         deckOfCards.remove(topCard);
+        ArrayList<Card> dealtArray = new ArrayList<>();
+        dealtArray.add(topCard);
         return topCard;
     }
 
