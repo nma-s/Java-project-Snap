@@ -12,10 +12,6 @@ import java.util.Scanner;
 
 public class Snap extends CardGame {
     Scanner snapScanner = new Scanner(System.in);
-//    ArrayList<Card> player1Array  = new ArrayList<>();
-//    ArrayList<Card> player2Array = new ArrayList<>();
-    private Card previousCard;
-    private Card currentCard;
 
     public Snap(){
         super();
@@ -50,10 +46,12 @@ public class Snap extends CardGame {
     public void playSnap(){
         boolean gameEnded = false;
         System.out.println("Welcome to Snap! Press enter to deal a card");
-        previousCard = null;
+        //    ArrayList<Card> player1Array  = new ArrayList<>();
+        //    ArrayList<Card> player2Array = new ArrayList<>();
+        Card previousCard = null;
         while(!gameEnded && !deckOfCards.isEmpty()) {
             snapScanner.nextLine();
-            currentCard = dealCard();
+            Card currentCard = dealCard();
             System.out.println(currentCard);
             System.out.println(currentCard.getSymbol());
             if(previousCard != null && currentCard.getSymbol().equals(previousCard.getSymbol())){
