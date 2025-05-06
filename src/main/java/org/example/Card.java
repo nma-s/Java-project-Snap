@@ -20,11 +20,11 @@ public class Card {
     public String getSuits() {
         return suits;
     }
-//
-//    public String getSymbol() {
-//        return symbol.getCardSymbol();
-//    }
-//
+
+    public String getSymbol() {
+        return symbol;
+    }
+
     public int getValue() {
         return value;
     }

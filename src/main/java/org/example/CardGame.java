@@ -11,7 +11,7 @@ import java.util.Comparator;
 // Has a getDeck method that lists out the cards in the deck.
 
 public class CardGame {
-    private ArrayList<Card> deckOfCards = new ArrayList<>();
+    protected ArrayList<Card> deckOfCards = new ArrayList<>();
     private String name;
 
 //  Constructor
@@ -36,12 +36,11 @@ public class CardGame {
 
 //    Card dealCard()
 //    Takes the card from the top of the deck and returns it.
+//    It removes the dealt card from deckOfCard and add it to a new array.
 
     public Card dealCard() {
         Card topCard = deckOfCards.getFirst();
         deckOfCards.remove(topCard);
-        ArrayList<Card> dealtArray = new ArrayList<>();
-        dealtArray.add(topCard);
         return topCard;
     }
 

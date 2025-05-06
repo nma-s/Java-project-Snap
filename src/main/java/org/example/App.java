@@ -1,5 +1,6 @@
 package org.example;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,12 +21,20 @@ public class App {
 //        System.out.println(snap.shuffleDeck());
 
         Snap snap2 = new Snap();
-        System.out.println(snap2.getDeck().size());
-        System.out.println(snap2.runSnapScanner());
+//        System.out.println(snap2.getDeck().size());
+//        System.out.println(snap2.snapCommand());
+//        System.out.println(snap2.getDeck().size());
+//        System.out.println(snap2.snapCommand());
+//
+//        System.out.println(snap2.getPlayer1Array());
+//        System.out.println(snap2.getPlayer2Array());
         System.out.println(snap2.getDeck().size());
 
+      snap2.playSnap();
 
+      System.out.println(snap2.getDeck().size());
 
     }
 }
+
 
