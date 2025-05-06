@@ -17,21 +17,21 @@ public class Snap extends CardGame {
         super();
 //        this.player1Array = getPlayer1Array();
 //        this.player2Array = getPlayer2Array();
-        playerDecks();
+//        playerDecks();
     }
 
-    public void playerDecks() {
-        ArrayList<Card> deckOfCards = getDeck();
-        for (int i = 0; i < deckOfCards.size(); i++) {
-            if(i % 2 == 0) {
-                 player1Array.add(deckOfCards.get(i));
-            } else {
-                player2Array.add(deckOfCards.get(i));
-            }
-        }
-        System.out.println("player1" + player1Array);
-        System.out.println("player2" + player2Array);
-    }
+//    public void playerDecks() {
+//        ArrayList<Card> deckOfCards = getDeck();
+//        for (int i = 0; i < deckOfCards.size(); i++) {
+//            if(i % 2 == 0) {
+//                 player1Array.add(deckOfCards.get(i));
+//            } else {
+//                player2Array.add(deckOfCards.get(i));
+//            }
+//        }
+//        System.out.println("player1" + player1Array);
+//        System.out.println("player2" + player2Array);
+//    }
 
 
 //
@@ -42,8 +42,8 @@ public class Snap extends CardGame {
 //    public ArrayList<Card> getPlayer2Array() {
 //        return player2Array;
 //    }
-
-    public void playSnap(){
+    @Override
+    public void play(){
         boolean gameEnded = false;
         System.out.println("Welcome to Snap! Press enter to deal a card");
         //    ArrayList<Card> player1Array  = new ArrayList<>();
@@ -60,13 +60,5 @@ public class Snap extends CardGame {
             }
             previousCard = currentCard;
         }
-
-
-
     }
-
-
-
-
-
 }

@@ -30,9 +30,9 @@ public class App {
 //        System.out.println(snap2.getPlayer2Array());
         System.out.println(snap2.getDeck().size());
 
-      snap2.playSnap();
+        snap2.play();
 
-      System.out.println(snap2.getDeck().size());
+        System.out.println(snap2.getDeck().size());
 
     }
 }

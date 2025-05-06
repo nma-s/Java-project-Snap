@@ -10,9 +10,8 @@ import java.util.Comparator;
 // Has a name which is also defined in the constructor.
 // Has a getDeck method that lists out the cards in the deck.
 
-public class CardGame {
+public abstract class CardGame {
     protected ArrayList<Card> deckOfCards = new ArrayList<>();
-    private String name;
 
 //  Constructor
     public CardGame() {
@@ -68,7 +67,7 @@ public class CardGame {
         Collections.shuffle(deckOfCards);
         return deckOfCards;
     }
-
+    public abstract void play();
 
 
 }
