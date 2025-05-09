@@ -9,12 +9,14 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Timer;
 
 public class Snap extends CardGame {
     Scanner snapScanner = new Scanner(System.in);
     Player player1;
     Player player2;
     Player currentPlayer;
+    Timer timer = new Timer();
 
 
     public Snap() {
@@ -40,7 +42,7 @@ public class Snap extends CardGame {
             System.out.println(currentCard);
             System.out.println(currentCard.getSymbol());
             if(previousCard != null && currentCard.getSymbol().equals(previousCard.getSymbol())){
-                System.out.println("Snap! Both cards have the same symbol " + previousCard.getSymbol());
+                System.out.println("Snap!" + currentPlayer.getPlayerName() + " has won! Both cards have the same symbol " + previousCard.getSymbol());
                 gameEnded = true;
             }
             previousCard = currentCard;

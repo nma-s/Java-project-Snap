@@ -8,11 +8,7 @@ import java.util.List;
 public class App {
     public static void main( String[] args )
     {
-
-//    Card card1 = new Card(Suits.HEART,CardSymbol.ACE);
-//        System.out.println("Test: " + card1);
-//
-//CardGame snap = new CardGame();
+//        CardGame snap = new CardGame();
 //        System.out.println(snap.getDeck());
 //        System.out.println(snap.getDeck().size());
 //        System.out.println(snap.dealCard());
@@ -21,17 +17,8 @@ public class App {
 //        System.out.println(snap.shuffleDeck());
 
         Snap snap2 = new Snap();
-//        System.out.println(snap2.getDeck().size());
-//        System.out.println(snap2.snapCommand());
-//        System.out.println(snap2.getDeck().size());
-//        System.out.println(snap2.snapCommand());
-//
-//        System.out.println(snap2.getPlayer1Array());
-//        System.out.println(snap2.getPlayer2Array());
         System.out.println(snap2.getDeck().size());
-
         snap2.play();
-
         System.out.println(snap2.getDeck().size());
 
     }
