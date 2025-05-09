@@ -10,13 +10,14 @@ package org.example;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Timer;
+import java.util.concurrent.*;
 
 public class Snap extends CardGame {
     Scanner snapScanner = new Scanner(System.in);
     Player player1;
     Player player2;
     Player currentPlayer;
-    Timer timer = new Timer();
+    ExecutorService executor = Executors.newSingleThreadExecutor();
 
 
     public Snap() {
@@ -37,18 +38,31 @@ public class Snap extends CardGame {
         while(!gameEnded && !deckOfCards.isEmpty()) {
             System.out.println("It's " + currentPlayer.getPlayerName() + "'s turn. " + "Press enter to deal a card");
             snapScanner.nextLine();
-            currentPlayer = (currentPlayer == player1 ? player2 : player1);
             Card currentCard = dealCard();
             System.out.println(currentCard);
-            System.out.println(currentCard.getSymbol());
             if(previousCard != null && currentCard.getSymbol().equals(previousCard.getSymbol())){
-                System.out.println("Snap!" + currentPlayer.getPlayerName() + " has won! Both cards have the same symbol " + previousCard.getSymbol());
+                System.out.println("Snap! " + currentPlayer.getPlayerName() + " has won! Both cards have the same symbol " + previousCard.getSymbol());
                 gameEnded = true;
             }
             previousCard = currentCard;
+            if(!gameEnded){
+                currentPlayer = (currentPlayer == player1 ? player2 : player1);
+            }
         }
         if(deckOfCards.isEmpty()){
             System.out.println("There are no more cards left. Game over");
+        }
+    }
+
+    public  boolean checkSnapTimer() {
+        System.out.println("Type 'snap' to win! You have 2 seconds. GO, GO, GO!");
+        Callable<String> playerInput = () -> snapScanner.nextLine();
+        Future<String> snapResult = executor.submit(playerInput);
+        try {
+            snapResult.get(2, TimeUnit.SECONDS);
+            return true;
+        } catch (InterruptedException | ExecutionException | TimeoutException e) {
+            throw new RuntimeException(e);
         }
     }
 }

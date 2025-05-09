@@ -12,13 +12,5 @@ public class Player {
         return playerName;
     }
 
-//    public String switchPlayer(){
-//        String turn = "";
-//        if(turn.equals(player1)){
-//            return player2;
-//        } else {
-//            return player1;
-//        }
-//    }
 }
 

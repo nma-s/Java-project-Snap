@@ -8,14 +8,6 @@ import java.util.List;
 public class App {
     public static void main( String[] args )
     {
-//        CardGame snap = new CardGame();
-//        System.out.println(snap.getDeck());
-//        System.out.println(snap.getDeck().size());
-//        System.out.println(snap.dealCard());
-//        System.out.println(snap.sortDeckInNumberOrder());
-//        System.out.println("Sorted By Suits" + snap.sortDeckIntoSuits());
-//        System.out.println(snap.shuffleDeck());
-
         Snap snap2 = new Snap();
         System.out.println(snap2.getDeck().size());
         snap2.play();
